@@ -22,12 +22,9 @@ const FormIGD = ({ data }) => {
       <PasienDetail pasien={pasien} />
       <TanggalDanJam tanggal={asesmen?.tgl_masuk} jam={asesmen?.jam_masuk} />
       <KeluhanUtama KeluhanUtama={asesmen?.keluh_utama} />
-      <RiwayatPenyakit
-        riwayatSekarang={asesmen?.rwt_sekarang}
-        riwayatDulu={asesmen?.rwt_dulu}
-      />
+      <RiwayatPenyakit asesmen={asesmen} />
       <Objektif fisik={fisik} vitalSign={vital_sign} />
-      <PemeriksaanFisik fisik={fisik} />
+      <PemeriksaanFisik fisik={fisik} asesmen={asesmen} />
       <PemeriksaPenunjang labor={labor} radiologi={radiologi} />
       <DiagnosaKerja diagnosa={diagnosa} />
       <Planning asesmen={asesmen} />

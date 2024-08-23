@@ -1,6 +1,8 @@
 import Anatomi from 'src/assets/images/anatomi.png'
+import { constants } from 'src/utils/constants'
 
-const PemeriksaanFisik = ({ fisik }) => {
+const PemeriksaanFisik = ({ fisik, asesmen }) => {
+  console.log('image lokalis', constants.baseUrlImage + asesmen?.image_lokalis)
   return (
     <div className='border-l border-r border-t border-black p-2'>
       <h3>PEMERIKSAAN FISIK</h3>
@@ -49,7 +51,7 @@ const PemeriksaanFisik = ({ fisik }) => {
       </div>
       <div className='text-center flex items-center justify-center'>
         <img
-          src={Anatomi}
+          src={`${constants.baseUrlImage}${asesmen?.image_lokalis}` ?? Anatomi}
           alt='gambar anatomi tubuh'
           className='object-contain'
         />

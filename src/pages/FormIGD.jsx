@@ -4,7 +4,7 @@ import DiagnosaKerja from 'src/components/igd/DiagnosaKerja'
 import DokterPemeriksa from 'src/components/igd/DokterPemeriksa'
 import KeluhanUtama from 'src/components/igd/KeluhanUtama'
 import Objektif from 'src/components/igd/Objektif'
-import PasienDetail from 'src/components/igd/PasienDetail'
+import PasienDetail from 'src/components/common/PasienDetail'
 import PemeriksaanFisik from 'src/components/igd/PemeriksaanFisik'
 import PemeriksaPenunjang from 'src/components/igd/PemeriksaPenunjang'
 import Planning from 'src/components/igd/Planning'
@@ -31,7 +31,15 @@ const FormIGD = () => {
     <Layout>
       <div className='border border-black p-4'>
         <KopSurat />
-        <PasienDetail pasien={pasien} />
+        <PasienDetail
+          pasien={pasien}
+          title={
+            <div>
+              <h3>ASESMEN AWAL MEDIS</h3>
+              <h3>INSTALASI GAWAT DARURAT</h3>
+            </div>
+          }
+        />
         <TanggalDanJam tanggal={asesmen?.tgl_masuk} jam={asesmen?.jam_masuk} />
         <KeluhanUtama KeluhanUtama={asesmen?.keluh_utama} />
         <RiwayatPenyakit asesmen={asesmen} />

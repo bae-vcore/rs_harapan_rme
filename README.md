@@ -1,8 +1,24 @@
-# React + Vite
+# RME RS HARAPAN - PEMATANG SIANTAR
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Deploy Nginx
 
-Currently, two official plugins are available:
+- jalankan yarn build / npm build
+- arahkan path dist folder setelah berhasil build projek ke nginx config
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+exaple :
+
+nginx.conf
+
+```
+server {
+        listen 4173;
+        listen localhost;
+        server_name rme_web alias rme_web_app;
+
+        location / {
+            root C:/Users/HP-PC/Code/Work/rme_web/dist;  # path build folder
+            index index.html;
+            try_files $uri $uri/ /index.html;
+        }
+    }
+```

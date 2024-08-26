@@ -3,6 +3,7 @@ import App from 'src/App'
 import ErrorPage from 'src/components/ErrorPage'
 import CPPT from 'src/pages/CPPT'
 import FormIGD from 'src/pages/FormIGD'
+import Triase from 'src/pages/Triase'
 
 export const router = createBrowserRouter([
   {
@@ -11,13 +12,21 @@ export const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: '/report/form-igd',
-    element: <FormIGD />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: '/report/cppt',
-    element: <CPPT />,
+    path: 'report/',
+    children: [
+      {
+        path: 'form-igd',
+        element: <FormIGD />,
+      },
+      {
+        path: 'cppt',
+        element: <CPPT />,
+      },
+      {
+        path: 'triase',
+        element: <Triase />,
+      },
+    ],
     errorElement: <ErrorPage />,
   },
 ])

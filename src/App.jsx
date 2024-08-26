@@ -1,13 +1,17 @@
 import Layout from './components/Layout'
+import Logo from 'src/assets/images/logo_rs_harapan.png'
 
 function App() {
   return (
     <Layout>
       <div className='flex justify-center items-center'>
-        <div className='py-[200px] text-center'>
-          <h1 className='font-medium'>REKAM MEDIS ELEKTRONIK</h1>
-          <h1 className='font-bold text-2xl'>RUMAH SAKIT HARAPAN</h1>
-          <h1 className='font-medium'>PEMATANG SIANTAR</h1>
+        <div className='  py-[150px] text-center flex flex-col items-center'>
+          <img
+            src={Logo}
+            alt='logo rs harapan'
+            className='w-[150px] object-contain mb-4'
+          />
+          <h3 className='font-bold'>REKAM MEDIS ELEKTRONIK</h3>
         </div>
       </div>
     </Layout>

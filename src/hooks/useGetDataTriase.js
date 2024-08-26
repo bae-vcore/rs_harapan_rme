@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { getCPPT } from 'src/service/report_cppt'
+import { getTriase } from 'src/service/report_triase'
 
-export const useGetDataCPPT = () => {
+export const useGetDataTriase = () => {
   const [params, setSearchParams] = useSearchParams()
   const token = params.get('token') ?? ''
   const no_rm = params.get('no_rm') ?? ''
+  const no_reg = params.get('no_reg') ?? ''
+  const tanggal = params.get('tanggal') ?? ''
 
   const [loading, setLoading] = useState(false)
   const [data, setData] = useState(null)
@@ -15,7 +17,7 @@ export const useGetDataCPPT = () => {
     setLoading(true)
     ;(async () => {
       try {
-        const res = await getCPPT(no_rm, token)
+        const res = await getTriase(no_rm, no_reg, tanggal, token)
 
         if (res?.metadata?.code == 200) {
           setData(res?.response)

@@ -1,14 +1,11 @@
 import dayjs from 'dayjs'
 
-const PasienDetail = ({ pasien = {} }) => {
+const PasienDetail = ({ title = 'title', pasien = {} }) => {
   return (
     <div className='border-l border-t border-r border-black mt-5'>
       <div className='flex items-center justify-center'>
         <div className='h-[150px] w-full flex justify-center items-center border-r border-black'>
-          <div className='text-center font-bold text-xl'>
-            <h3>ASESMEN AWAL MEDIS</h3>
-            <h3>INSTALASI GAWAT DARURAT</h3>
-          </div>
+          <div className='text-center font-bold text-xl'>{title}</div>
         </div>
         <div className='flex items-center justify-start h-[150px] w-full'>
           <div className='pl-4 flex gap-5'>

@@ -1,14 +1,23 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from 'src/App'
+import ErrorPage from 'src/components/ErrorPage'
+import CPPT from 'src/pages/CPPT'
+import FormIGD from 'src/pages/FormIGD'
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: (
-      <div className='min-h-screen w-full text-center flex justify-center items-start py-[250px]'>
-        <p className='text-red-500'>Something Wrong</p>
-      </div>
-    ),
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/report/form-igd',
+    element: <FormIGD />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/report/cppt',
+    element: <CPPT />,
+    errorElement: <ErrorPage />,
   },
 ])

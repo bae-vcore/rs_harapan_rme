@@ -2,7 +2,7 @@ import axios from 'axios'
 import { constants } from 'src/utils/constants'
 
 const instance = axios.create({
-  baseURL: `${constants.baseUrl}/app/v1`,
+  baseURL: `${constants.baseUrl}/app/v2`,
   timeout: 10000,
 })
 

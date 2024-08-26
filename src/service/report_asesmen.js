@@ -7,7 +7,7 @@ export const getReportAsesmenAwal = async (no_reg, no_rm, tanggal, person) => {
       { no_reg, no_rm, tanggal, person },
       null
     )
-    console.log(response.data?.response)
+    // console.log(response.data?.response)
     return response.data
   } catch (error) {
     console.log('error while getReportAsesmenAwal: ', error)

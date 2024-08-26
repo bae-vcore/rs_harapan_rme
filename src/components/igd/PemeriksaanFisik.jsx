@@ -2,7 +2,7 @@ import Anatomi from 'src/assets/images/anatomi.png'
 import { constants } from 'src/utils/constants'
 
 const PemeriksaanFisik = ({ fisik, asesmen }) => {
-  console.log('image lokalis', constants.baseUrlImage + asesmen?.image_lokalis)
+  // console.log('image lokalis', constants.baseUrlImage + asesmen?.image_lokalis)
   return (
     <div className='border-l border-r border-t border-black p-2'>
       <h3>PEMERIKSAAN FISIK</h3>

@@ -1,7 +1,7 @@
 import Logo from 'src/assets/images/logo_rs_harapan.png'
 import { constants } from 'src/utils/constants'
 
-const KopSurat = () => {
+const KopSurat = ({ hasAkredistasi = false }) => {
   return (
     <>
       <div className='flex justify-between items-center'>
@@ -21,9 +21,15 @@ const KopSurat = () => {
             <p>Email : {constants.contact.email}</p>
             <p>Website : {constants.contact.website}</p>
           </div>
+          {hasAkredistasi && (
+            <p className='font-medium text-center'>
+              Akreditasi No. KARS-SERT/34/VII/2011
+            </p>
+          )}
         </div>
-        <div />
+        <div className='w-[150px]' />
       </div>
+
       <div className='h-1 bg-black mt-4' />
     </>
   )

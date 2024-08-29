@@ -22,8 +22,8 @@ const GeneralConsent = () => {
           <TextField title='No.HP' />
         </div>
         <div className='px-5 py-5'>
-          <p>Sebagai Pasien/Penanggungjawab</p>
-          <TextField title='Nama Pasien' />
+          <p>Sebagai Pasien/Penanggung jawab</p>
+          <TextField title='Nama' />
           <TextField title='Tanggal Lahir' />
           <TextField title='Alamat' />
           <TextField title='No.HP' />
@@ -46,7 +46,7 @@ const GeneralConsent = () => {
               <p>1.</p>
               <p>
                 Saya mengetahui bahwa saya memiliki kondisi yang membutuhkan
-                perawatan medis, aya mengijinkan dokter dan professional
+                perawatan medis, saya mengijinkan dokter dan professional
                 kesehatan lainnya untuk melakukan prosedur diagnose Dan untuk
                 memberikan pengobatan medis seperti yang diperlukan dalam
                 penilaian Professional mereka. Prosedur diagnostic dan perawatan
@@ -82,7 +82,7 @@ const GeneralConsent = () => {
                   <p>b.</p>
                   <span className='ml-5'>
                     <p>
-                      Saya menngerti dan memahami bahwa saya memiliki hak untuk
+                      Saya mengerti dan memahami bahwa saya memiliki hak untuk
                       persetujuan atau menolak persetujuan untuk setiap prosedur
                       atau terapi.
                     </p>
@@ -184,7 +184,7 @@ const GeneralConsent = () => {
           </p>
           <p className='ml-10 mb-2'>
             <span className='mr-4'>✓</span>
-            Saya tel.ah memahami bahwa RS Harapan tidak bertanggung jawab atas
+            Saya telah memahami bahwa RS Harapan tidak bertanggung jawab atas
             semua kehilangan barang-barang milik saya
           </p>
         </div>

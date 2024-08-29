@@ -33,4 +33,5 @@ const CPPT = () => {
     </Layout>
   )
 }
+
 export default CPPT

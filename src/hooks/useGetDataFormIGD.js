@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 import { getReportAsesmenAwal } from 'src/service/report_asesmen'
 
 export const useGetDataFormIGD = () => {
-  const [params, setSearchParams] = useSearchParams()
+  const [params] = useSearchParams()
   const no_reg = params.get('no_reg') ?? ''
   const no_rm = params.get('no_rm') ?? ''
   const tanggal = params.get('tanggal') ?? ''

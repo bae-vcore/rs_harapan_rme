@@ -1,10 +1,10 @@
-import dayjs from 'dayjs'
+import { formatBirthDay } from 'src/utils/formatTime'
 
 const TanggalDanJam = ({ tanggal, jam }) => {
   return (
     <div className='border-r border-t border-l  border-black flex items-center px-1'>
       <div className='w-full p-1'>
-        <p>Tanggal : {dayjs(tanggal).format('YYYY-MM-DD')}</p>
+        <p>Tanggal : {formatBirthDay(tanggal)}</p>
       </div>
       <div className='w-full'>
         <p>Jam : {jam}</p>

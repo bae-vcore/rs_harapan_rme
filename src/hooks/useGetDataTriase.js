@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 import { getTriase } from 'src/service/report_triase'
 
 export const useGetDataTriase = () => {
-  const [params, setSearchParams] = useSearchParams()
+  const [params] = useSearchParams()
   const token = params.get('token') ?? ''
   const no_rm = params.get('no_rm') ?? ''
   const no_reg = params.get('no_reg') ?? ''

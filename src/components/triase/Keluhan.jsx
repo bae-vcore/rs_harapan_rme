@@ -116,6 +116,7 @@ const Keluhan = ({ data = {} }) => {
             <p>: {fisik?.Jantung}</p>
           </div>
         </div>
+        <div className='w-full p-1' />
       </div>
       {/* Pemeriksaan Fisik */}
       {/* Asesmen Nyeri */}

@@ -1,6 +1,6 @@
-import dayjs from 'dayjs'
 import React from 'react'
 import QRCode from 'react-qr-code'
+import { formatDateWithTime } from 'src/utils/formatTime'
 
 const Tabel = ({ data = [] }) => {
   return (
@@ -39,7 +39,7 @@ const Tabel = ({ data = [] }) => {
           <div className='border border-black flex'>
             <div className='border-r border-black flex-[0.3] flex justify-center items-center'>
               <p className='text-center p-2 text-sm font-medium'>
-                {dayjs(item?.insert_dttm).format('YYYY-MM-DD HH:mm')}
+                {formatDateWithTime(item?.insert_dttm)}
               </p>
             </div>
             <div className='border-r border-black flex-[0.4] flex items-center justify-center'>

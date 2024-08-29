@@ -10,7 +10,7 @@ import Petunjuk from 'src/components/triase/Petunjuk'
 import { useGetDataTriase } from 'src/hooks/useGetDataTriase'
 
 const Triase = () => {
-  const { data, loading, error, no_rm } = useGetDataTriase()
+  const { data, loading, error } = useGetDataTriase()
 
   if (loading) return <Loading />
   if (data == null) return <NoData />
@@ -35,4 +35,5 @@ const Triase = () => {
     </Layout>
   )
 }
+
 export default Triase

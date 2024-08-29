@@ -1,4 +1,4 @@
-import dayjs from 'dayjs'
+import { formatBirthDay } from 'src/utils/formatTime'
 
 const PasienDetail = ({ title = 'title', pasien = {} }) => {
   return (
@@ -16,7 +16,7 @@ const PasienDetail = ({ title = 'title', pasien = {} }) => {
             </div>
             <div>
               <p>: {pasien?.nama}</p>
-              <p>: {dayjs(pasien?.tgl_lahir).format('YYYY-MM-DD')}</p>
+              <p>: {formatBirthDay(pasien?.tgl_lahir)}</p>
               <p>: {pasien?.id}</p>
             </div>
           </div>

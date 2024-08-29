@@ -1,5 +1,5 @@
-import dayjs from 'dayjs'
 import React from 'react'
+import { formatDateWithTime } from 'src/utils/formatTime'
 
 const PemeriksaPenunjang = ({ labor = [], radiologi = [] }) => {
   return (
@@ -102,8 +102,7 @@ function radiologiTable(radiologi = []) {
         {radiologi.map((item, index) => (
           <div key={`radiologi-kelompok-${index}`} className='bg-gray-300'>
             <p className='p-2'>
-              {item.nama_kelompok} -{' '}
-              {dayjs(item.tanggal).format('YYYY-MM-DD HH:mm')}
+              {item.nama_kelompok} - {formatDateWithTime(item.tanggal)}
             </p>
             <div key={index + 7}>
               {item.radiologi.map((item, index) => (

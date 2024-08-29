@@ -5,7 +5,7 @@ import Layout from 'src/components/Layout'
 const GeneralConsent = () => {
   return (
     <Layout>
-      <div className='border border-black p-4'>
+      <div className='p-4'>
         <KopSurat />
         <h3 className='font-bold text-center py-3'>
           PERSETUJUAN UMUM / GENERAL CONSENT
